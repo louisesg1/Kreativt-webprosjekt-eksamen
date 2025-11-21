@@ -1,0 +1,10 @@
+body {
+  background: url(/images/hus.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.farge{
+    background-color: aqua;
+    
+}
