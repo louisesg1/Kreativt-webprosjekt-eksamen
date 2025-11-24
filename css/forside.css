@@ -6,5 +6,32 @@ body {
 
 .farge{
     background-color: aqua;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+}
+
+.stue{
+    left: 610px;
+    top: 115px;
+    height: 385px;
+    width: 338px;
+}
+
+.kjoekken{
+    left: 910px;
+    top: 115px;
+    height: 200px;
+    width: 338px;
+}
+
+.bad{
+    left: 610px;
+    top: 502px;
+    height: 210px;
+    width: 302px;
+}
+
+.stue1{
     
 }
