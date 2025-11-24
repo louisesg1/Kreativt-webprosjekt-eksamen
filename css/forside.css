@@ -1,37 +1,46 @@
-body {
-  background: url(/images/hus.png);
+body{
+  background: url(/images/forside.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.farge{
-    background-color: aqua;
+.colour{
     height: 20px;
     width: 20px;
     position: absolute;
 }
 
-.stue{
-    left: 610px;
-    top: 115px;
-    height: 385px;
-    width: 338px;
+.living-room{
+    left: 42%;
+    top: 14%;
+    height: 48%;
+    width: 24%;
 }
 
-.kjoekken{
-    left: 910px;
-    top: 115px;
-    height: 200px;
-    width: 338px;
+.kitchen{
+    left: 65%;
+    top: 14%;
+    height: 25%;
+    width: 21%;
 }
 
-.bad{
-    left: 610px;
-    top: 502px;
-    height: 210px;
-    width: 302px;
+.bathroom{
+    left: 43%;
+    top: 61%;
+    height: 27%;
+    width: 20%;  
 }
 
-.stue1{
-    
+.bedroom1{
+    left: 66%;
+    top: 39%;
+    height: 25%;
+    width: 20%;
+}
+
+.bedroom2{
+    left: 63%;
+    top: 61%;
+    height: 27%;
+    width: 23%;
 }
