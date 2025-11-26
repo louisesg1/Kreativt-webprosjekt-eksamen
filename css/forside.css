@@ -6,31 +6,29 @@ body{
   overflow: hidden;
 }
 
-.house-container{
-    position: absolute;
+ul{
+    list-style: none;
+    line-height: 1.5rem;
 }
 
-.house-img{
-    max-width: 100%;
-    height: auto;
+li{
+    color: black;
 }
+
+/* .house-container{
+    position: absolute;
+} */
+
 
 .textbox{
     position:absolute;
     background-color: antiquewhite;
-    padding-inline: 2rem;
-    margin-top: 8%;
+    padding-inline: 1rem;
+    margin-top: 4%;
+    line-height: 1rem;
+    border: 4px solid black;
+    border-radius: 1.5rem;
 }
-.rooms{
-    position: absolute;
-    /* background-color: aqua;
-    opacity: 50%; */
-}
-
-/* .rooms:hover{ 
-    background-color: yellow; 
-    opacity:30%;
-} */
 
 /* .living-room{
     left: 42%;
@@ -68,53 +66,70 @@ body{
 } */
 
 .living-room-effect{
-    opacity: 0.5; 
+    opacity: 0; 
     left: 42%;
     top: 13%;
-    height: 50%;
+    height: 51%;
     width: auto;
     position: absolute;
+    z-index: 999;
 }
 
 .living-room-effect:hover{
     opacity: 1;
+    transform: scale(120%);
 }
 
 .bathroom-effect{
-    opacity: 0.5; 
+    opacity: 0; 
     left: 42%;
     top: 61%;
     height: 28%;
     width: auto; 
     position: absolute;
+    z-index: 999;
 }
 
 .bathroom-effect:hover{
     opacity: 1;
+    transform: scale(120%);
 }
 
 .kitchen-effect{
-    opacity: 0.5; 
-    left: 65.5%;
+    opacity: 0; 
+    left: 64%;
     top: 14%;
-    height: 25%;
+    height: 27%;
     width: auto;
     position: absolute;
+    z-index: 999;
 }
 
 .kitchen-effect:hover{
     opacity: 1;
+    transform: scale(120%);
+
 }
 
 .bedroom-effect{
-    opacity: 0.5; 
-    left: 63%;
+    opacity: 0; 
+    left: 62%;
     top: 39%;
     height: 50%;
     width: auto;
     position: absolute;
+    z-index: 999;
 }
 
 .bedroom-effect:hover{
     opacity: 1;
+    transform: scale(120%);
+}
+
+.house-img{
+    width: auto;
+    height: 79%;
+    position: absolute;
+    left: 37%;
+    top: 13%;
 }
