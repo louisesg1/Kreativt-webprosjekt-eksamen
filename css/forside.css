@@ -1,3 +1,4 @@
+/* bildet er satt sammen av opphavsfrie bilder funnet på ... bildene er sammensatt ved hjelp av canva presentasjonsverktøy  */
 body{
   background: url(/images/index-background.svg);
   background-repeat: no-repeat;
@@ -26,12 +27,12 @@ body{
     opacity: 50%; */
 }
 
-.rooms:hover{ 
+/* .rooms:hover{ 
     background-color: yellow; 
     opacity:30%;
-}
+} */
 
-.living-room{
+/* .living-room{
     left: 42%;
     top: 14%;
     height: 48%;
@@ -64,4 +65,52 @@ body{
     top: 0%;
     height: 99%;
     width: 42%;
+} */
+
+.living-room-effect{
+    opacity: 0;
+    max-width: 100%;
+    top: 0%;
+    height: auto;
+    position: absolute;
+}
+
+.living-room-effect:hover{
+    opacity: 1;
+}
+
+.bathroom-effect{
+    opacity: 0;
+    max-width: 100%;
+    top: 0%;
+    height: auto;
+    position: absolute;
+}
+
+.bathroom-effect:hover{
+    opacity: 1;
+}
+
+.kitchen-effect{
+    opacity: 0;
+    max-width: 100%;
+    top: 0%;
+    height: auto;
+    position: absolute;
+}
+
+.kitchen-effect:hover{
+    opacity: 1;
+}
+
+.bedroom-effect{
+    opacity: 0;
+    max-width: 100%;
+    top: 0%;
+    height: auto;
+    position: absolute;
+}
+
+.bedroom-effect:hover{
+    opacity: 1;
 }
