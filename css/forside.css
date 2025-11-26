@@ -2,6 +2,7 @@ body{
   background: url(/images/index-background.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 .house-container{
@@ -13,12 +14,21 @@ body{
     height: auto;
 }
 
-.colour{
-    height: 20px;
-    width: 20px;
+.textbox{
+    position:absolute;
+    background-color: antiquewhite;
+    padding-inline: 2rem;
+    margin-top: 8%;
+}
+.rooms{
     position: absolute;
-    background-color: aqua;
-    opacity: 50%;
+    /* background-color: aqua;
+    opacity: 50%; */
+}
+
+.rooms:hover{ 
+    background-color: yellow; 
+    opacity:30%;
 }
 
 .living-room{
@@ -29,7 +39,7 @@ body{
 }
 
 .kitchen{
-    left: 65%;
+    left: 65.5%;
     top: 14%;
     height: 25%;
     width: 21%;
@@ -38,20 +48,20 @@ body{
 .bathroom{
     left: 42%;
     top: 61%;
-    height: 27%;
+    height: 28%;
     width: 21%;  
 }
 
-.bedroom1{
-    left: 66%;
+.bedroom{
+    left: 63%;
     top: 39%;
-    height: 25%;
-    width: 20%;
+    height: 50%;
+    width: 23.5%;
 }
 
-.bedroom2{
-    left: 63%;
-    top: 61%;
-    height: 27%;
-    width: 23%;
+.garden{
+    left: 0%;
+    top: 0%;
+    height: 99%;
+    width: 42%;
 }

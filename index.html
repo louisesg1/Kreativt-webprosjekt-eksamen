@@ -8,24 +8,44 @@
     <title>Velkommen til vårt robotstyrte hjem!</title>
   </head>
   <body>
-    <a href="stue.html">link til stua</a>
-    <a href="soverom.html">link til soverom</a>
-    <a href="kjoekken.html">link til kjøkken</a>
-    <a href="bad.html">link til bad</a>
-    <a href="hage.html">link til hage</a>
+    <header>
+      <a href="stue.html">Stue</a>
+      <a href="soverom.html">Soverom</a>
+      <a href="kjoekken.html">Kjøkken</a>
+      <a href="bad.html">Bad</a>
+      <a href="hage.html">Hage</a>
+    </header>
+    <main>
+      <div class="textbox">
+        <h1>Velkommen til vårt robotstyrte hjem!</h1>
+        <h2>Klikk på et rom for å gå inn</h2>
+      </div>
 
-    <div class="house-container">
-      <img
-        src="images/index-house.svg"
-        alt="house seen from above"
-        class="house-img"
-      />
-      <div class="bedroom1 colour"></div>
-      <div class="bedroom2 colour"></div>
-      <div class="living-room colour"></div>
-      <div class="bathroom colour"></div>
-      <div class="kitchen colour"></div>
-      <div class="garden colour"></div>
-    </div>
+      <nav>
+        <div class="house-container">
+          <img
+            src="images/index-house.svg"
+            alt="house seen from above"
+            class="house-img"
+          />
+          <a href="stue.html">
+            <div class="living-room rooms"></div>
+          </a>
+          <a href="soverom.html">
+            <div class="bedroom rooms"></div>
+          </a>
+
+          <a href="bad.html">
+            <div class="bathroom rooms"></div>
+          </a>
+          <a href="kjoekken.html">
+            <div class="kitchen rooms"></div>
+          </a>
+          <a href="hage.html">
+            <div class="garden rooms"></div>
+          </a>
+        </div>
+      </nav>
+    </main>
   </body>
 </html>
