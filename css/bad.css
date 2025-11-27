@@ -183,10 +183,10 @@ height: 100%;
 
 .mirror-wiper{ /* Viskeren for speilet */
     position: absolute; 
-    top: 8%; 
-    left: 5%;
-    width: 90%;
-    height: 5%; 
+    top: 8%; /* Justere vertikal posisjon */
+    left: 5%; /* Justerer horisontal posisjon */
+    width: 90%;/* Bredde på viskeren */
+    height: 5%; /* Høyde på viskeren */
     background: lightgray;
     border-radius: 20px; 
     opacity: 0; /* skjult før hover */

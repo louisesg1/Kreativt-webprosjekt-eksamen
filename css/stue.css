@@ -1,4 +1,4 @@
- body{
+body{
     width: 100vw;
     height: 100vh;
     margin: 0;
@@ -12,7 +12,7 @@
     height: 100vh;
     top: 0;
     left: 0;
-    background-image: url(/eksamen/bilder/stue.png); /* Bildet er henetet fra Ikea.no */
+    background-image: url(/images/stue.png); /* Bildet er henetet fra Ikea.no */
     background-size: cover;
     background-repeat: round;   
 } 

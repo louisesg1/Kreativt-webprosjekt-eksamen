@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+/*dette var bare en måte å få bildet helt oppi hjørnet og toppen*/
+
+.frame {
+    position: relative;
+    width: 1200px;
+}
+
+.overlay {
+    z-index: 450; 
+    position: absolute;
+    width: 1200px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0); 
+    animation: darkroom 3s ease-in-out alternate infinite;
+    animation-delay: 0.6s;
+    pointer-events: none;
+}
+
+@keyframes darkroom {
+    to {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+}
+/*fikk hjelp av ai.kristiania til å se over koden da jeg slet med å få fargen over riktig*/
+/*dette skulle da få det til å se ut som rommet er mørkere fordi gardinen blokkerer sollyset*/
+
+.backround {
+    width: 1200px;
+    z-index: -1;
+}
+
+.bed {
+    position: absolute;
+    left: 375px;
+    top: 516px;
+    width: 500px;
+    z-index: 60;
+}
+
+.bed:hover {
+    animation: massage 1s infinite alternate;
+}
+
+ @keyframes massage {
+   0%, 50%, 100% {
+    transform: translateY(0) rotate(0);
+    }
+    20% {
+    transform: translateY(-5px) rotate(2deg);
+    }
+    40% {
+    transform: translateY(10px) rotate(2deg);
+    }
+    60% {
+    transform: translateY(-20px) rotate(2deg);
+    }
+    80% {
+    transform: translateY(10px) rotate(2deg);
+    }
+}
+/*fikk hjelp av ai til å rotere*/
+/*målet her var at det skulle se ut som en "massasjeseng" som beveger seg selv*/
+
+.nightstand {
+    transition: transform 0.2s;
+    position: absolute;
+    left: 765px;
+    top: 517px;
+    width: 200px;
+    z-index: 50;
+}
+
+.nightstand:hover {
+    animation: jump 1s infinite;
+}
+
+@keyframes jump {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) rotate(0);
+    }
+    40% {
+        transform: translateY(-40px) rotate(-10deg);
+    }
+    60% {
+        transform: translateY(-20px) rotate(10deg);
+    }
+
+}
+/*hemmelig robot*/
+
+.curtains {
+    animation: curtains 3s alternate infinite, shade 3s ease-in-out alternate infinite ;
+    animation-delay: 0s, 2s;
+    position: absolute;
+    top: 75px;
+    left: 1150px;
+    width: 183px;
+    height: 700px;
+    z-index: 100;
+    transform: skew(0deg,-33deg);  
+}
+
+@keyframes curtains {
+    0% {
+        left: 1150px;
+    }
+    100% {
+        left: 1045px;
+    }
+}
+
+ @keyframes shade {
+    0% {
+        filter: brightness(1);
+    }
+    100% {
+        filter: brightness(0.8);
+    }
+ }
+/*fikk hjelp av ai til å gjøre gardiner mørkere, det var egentlig ikke planen i utganspunket men syns det fungerte bra*/
+/*smarthjem med sensorer så gardiner lukkes selv, eller ved beskjed*/
+
+ .button {
+    z-index: 500;
+    width: 80px;
+    position: absolute;
+    left: 0;
+    top: 0;
+ }
+/*hjemknapp*/
