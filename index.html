@@ -8,42 +8,58 @@
     <title>Velkommen til vårt robotstyrte hjem!</title>
   </head>
   <body>
-    <header>
-      <a href="stue.html">Stue</a>
-      <a href="soverom.html">Soverom</a>
-      <a href="kjoekken.html">Kjøkken</a>
-      <a href="bad.html">Bad</a>
-      <a href="hage.html">Hage</a>
-    </header>
     <main>
       <div class="textbox">
         <h1>Velkommen til vårt robotstyrte hjem!</h1>
         <h2>Klikk på et rom for å gå inn</h2>
+        <h3>Du kan klikke på:</h3>
+        <nav>
+          <ul>
+            <li><a href="stue.html">Stue</a></li>
+            <li><a href="soverom.html">Soverom</a></li>
+            <li><a href="kjoekken.html">Kjøkken</a></li>
+            <li><a href="bad.html">Bad</a></li>
+            <li><a href="hage.html">Hage</a></li>
+          </ul>
+        </nav>
       </div>
 
       <nav>
         <div class="house-container">
+          <div>
+            <a href="stue.html">
+              <img
+                src="images/living-room.svg"
+                alt="living room"
+                class="living-room"
+              />
+            </a>
+          </div>
+          <div>
+            <a href="soverom.html">
+              <img src="images/bedroom.svg" alt="bedroom" class="bedroom" />
+            </a>
+          </div>
+          <div>
+            <a href="bad.html">
+              <img src="images/bathroom.svg" alt="bathroom" class="bathroom" />
+            </a>
+          </div>
+          <div>
+            <a href="kjoekken.html">
+              <img src="images/kitchen.svg" alt="kitchen" class="kitchen" />
+            </a>
+          </div>
+          <div>
+            <a href="hage.html">
+              <div class="garden"></div>
+            </a>
+          </div>
           <img
             src="images/index-house.svg"
             alt="house seen from above"
             class="house-img"
           />
-          <a href="stue.html">
-            <div class="living-room rooms"></div>
-          </a>
-          <a href="soverom.html">
-            <div class="bedroom rooms"></div>
-          </a>
-
-          <a href="bad.html">
-            <div class="bathroom rooms"></div>
-          </a>
-          <a href="kjoekken.html">
-            <div class="kitchen rooms"></div>
-          </a>
-          <a href="hage.html">
-            <div class="garden rooms"></div>
-          </a>
         </div>
       </nav>
     </main>
