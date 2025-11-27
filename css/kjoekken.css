@@ -41,8 +41,26 @@
     top: 50%;
     left: 48%;
     width: 3%;
-    height: 5%;
+    height: 8%;
 }
+#water-flow{
+    background-color: aqua;
+    position:absolute;
+    width: 0.5%;
+    height: 0;
+    /* height: 5.7%; */
+    top: 55%;
+    left: 48.8%;
+    z-index: 0;
+    opacity: 1;
+    transition: height 0.4s linear, top 0.4s linear;
+}
+#tap:hover + #water-flow{
+    transition: height 0.5s linear, top 0s linear;
+    height: 5.7%;
+    top: 49.5%;
+}
+
 
 #knife{
     top: 48%;
@@ -50,11 +68,50 @@
     width: 8%;
     height: 10%;
 }
+#knife-image{
+    position: absolute;
+    top: 51%;
+    left: 53%;
+    width: 4%;
+    height: 4%;
+}
+#knife:hover + #knife-image{
+    animation: knife-cutting-animation 0.5s ease-in 0s infinite alternate;
+}
+@keyframes knife-cutting-animation {
+    0% {transform: translateY(0);}
+    /* 50% {transform: translateY(-100%);} */
+    100% {transform: translateY(-100%);}
+}
+
 #stove{
     top:  48%;
     left: 59%;
     width: 10%;
     height: 10%;
+}
+#blender{
+    top: 42%;
+    left:70%;
+    width: 6%;
+    height: 14%;
+}
+#blender-image{
+    position:absolute;
+    width: 5%;
+    height: 12%;
+    top: 44%;
+    left: 72%;
+}
+#blender:hover + #blender-image{
+    animation: blender-animation 0.1s linear 0s infinite;
+}
+@keyframes blender-animation{
+    0%{transform: rotate(0);}
+    25%{transform: rotate(15deg);}
+    50%{transform: rotate(0);}
+    75%{transform: rotate(-15deg);}
+    100%{transform: rotate(0);}
 }
 #oven{
     top: 31%;
@@ -101,7 +158,16 @@
     opacity: 0.6;
 }
 
-/* @keyframes oven-heat-anim {
-    0% {opacity: 0;}
-    100% {opacity: 0.4;}
-} */
+
+#home-button{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 0%;
+    left: 0;
+    z-index: 1;
+    background-color: blueviolet;
+}
+#home-image{
+    max-width: 100%;
+}
