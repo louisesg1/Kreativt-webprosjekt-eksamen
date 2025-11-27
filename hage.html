@@ -1,11 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/hage.css" />
     <title>Hage</title>
+    <link rel="stylesheet" href="css/hage.css" />
   </head>
-  <body></body>
+
+  <!-- Robot -->
+
+  <body>
+    <main class="garden">
+      <!-- Checkbox som styrer robot animasjon-->
+      <input type="checkbox" id="robot-toggle" class="hidden-checkbox" />
+      <!-- Klikkbart bilde av robotgressklipper-->
+      <label for="robot-toggle">
+        <img src="images/robotgressklipper.png" class="robot" alt="robot" />
+      </label>
+
+      <!-- Hjemknapp -->
+
+      <a href="index.html" class="home-btn">
+        <img src="images/hus.png" alt="hjemknapp" />
+      </a>
+
+      <!-- Automatiske sprinklere -->
+
+      <!-- SPRINKEL 1 -->
+      <div class="sprinkler s1">
+        <img
+          src="images/vannsprinkler.png"
+          class="sprinkler-img"
+          alt="sprinkler"
+        />
+        <div class="water">
+          <span><i></i></span>
+          <!-- Vanneffekten består av små span-elementer -->
+          <span><i></i></span>
+          <span><i></i></span>
+          <span><i></i></span>
+          <span><i></i></span>
+          <span><i></i></span>
+          <span><i></i></span>
+          <span><i></i></span>
+          <span><i></i></span>
+          <span><i></i></span>
+        </div>
+      </div>
+
+      <!-- SPRINKEL 2 !-->
+      <div class="sprinkler s2">
+        <img
+          src="images/vannsprinkler.png"
+          class="sprinkler-img"
+          alt="sprinkler"
+        />
+        <div class="water">
+          <span><i></i></span>
+          <span><i></i></span>
+          <span><i></i></span>
+          <span><i></i></span>
+          <span><i></i></span>
+          <span><i></i></span>
+          <span><i></i></span>
+          <span><i></i></span>
+          <span><i></i></span>
+          <span><i></i></span>
+        </div>
+      </div>
+
+      <!-- SPRINKEL 3-->
+      <div class="sprinkler s3">
+        <img
+          src="images/vannsprinkler.png"
+          class="sprinkler-img"
+          alt="sprinkler"
+        />
+        <div class="water">
+          <span><i></i></span>
+          <span><i></i></span>
+          <span><i></i></span>
+          <span><i></i></span>
+          <span><i></i></span>
+          <span><i></i></span>
+          <span><i></i></span>
+          <span><i></i></span>
+          <span><i></i></span>
+          <span><i></i></span>
+        </div>
+      </div>
+
+      <!-- Automatisk portåpner -->
+
+      <input type="checkbox" id="gate-toggle" class="hidden-checkbox" />
+      <label for="gate-toggle">
+        <!-- Klikkbar port over bakgrunnen -->
+        <img src="images/port.png" class="gate" alt="gate" />
+      </label>
+    </main>
+  </body>
 </html>
