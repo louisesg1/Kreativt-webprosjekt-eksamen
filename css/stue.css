@@ -12,7 +12,7 @@ body{
     height: 100vh;
     top: 0;
     left: 0;
-    background-image: url(/images/stue.png); /* Bildet er henetet fra Ikea.no */
+    background-image: url(/images/stue.webp); /* Bildet er henetet fra Ikea.no */
     background-size: cover;
     background-repeat: round;   
 } 

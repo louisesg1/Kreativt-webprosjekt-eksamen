@@ -5,7 +5,7 @@ men ingen kode er kopiert direkte. */
 /* bildet av huset, hagen og de individuelle rommene er satt sammen av opphavsfrie bilder funnet på stock.adobe.com, unsplash og andre nettsider med bilder til fri bruk.
  bildene er sammensatt ved hjelp av canva sitt presentasjonsverktøy og lastet ned som svg */
 body{
-  background: url(/images/index-background.svg);
+  background: url(/images/index-background.webp);
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
