@@ -1,0 +1,226 @@
+body{ /* Sikrer at body og html fyller hele skjermen uten marginer */
+margin: 0; 
+padding: 0;
+height: 100%;
+}
+
+.Whole-Bathroom{ /* Containeren for hele badet */
+    width: 100%; /* Full bredde */
+    height: 100vh; /* Full høyde av viewport */
+    overflow: hidden; /* Skjuler eventuelle overløpende elementer */
+    position: relative; /* Gjør det mulig å plassere hotspotene absolutt innenfor denne containeren */
+}
+
+.Bathroom{ /* Bakgrunnsbildet av badet */
+    width: 100%;
+    height: 100%;
+    object-fit: fill; 
+    display: block; 
+}
+
+.Hotspot-mirror,
+.Hotspot-shower{ /* Felles stil for begge hotspotene */
+    position: absolute; /* Absolutt posisjonering innenfor Whole-Bathroom */
+    z-index: 2; /* Sørger for at hotspotene er over bildet slik at hover fungerer */
+    background-color: transparent; /* Gjør bildene usynlige */
+    cursor: pointer; /* Endrer musepekeren til en peker ved hover */
+    overflow: hidden; /* Skjuler eventuelle overløpende elementer innenfor hotspotene */
+}
+
+.Hotspot-shower{ /* Plassering og størrelse for dusj-hotspoten */
+    left: 57%; 
+    top: 17%;
+    width: 25%;
+    height: 54%;
+}
+
+.Hotspot-mirror{ /* Plassering og størrelse for speil-hotspoten */
+    left: 28%;
+    top: 20%;
+    width: 18%;
+    height: 23%;
+}
+
+/* fikk hjelp av AI ved å forklare hvordan man lager vann som faller fra dusjen */
+
+.shower-water{ /* Container for vannet som faller fra dusjen */
+    position: absolute;
+    top: 5%; /* Justerer vertikal posisjon */
+    left: 30%; /* Justerer horisontal posisjon */
+    width: 40%; /* Bredde på vannområdet */
+    height: 30%; /* Høyde på vannområdet */
+    opacity: 0; /* skjult før hover */
+}
+
+.Hotspot-shower:hover .shower-water{ 
+    opacity: 1; /* vises ved hover */
+}
+
+.shower-water span{ /* Hver vannstråle */
+    position: absolute; /* Absolutt  posisjonering innenfor shower-water */
+    top: 20%; /* Startposisjon for vannstrålen */
+    width: 5%; /* Bredde på vannstrålen */
+    height: 5%; /* Størrelse på vannstrålen */
+    animation: fall 1.3s linear infinite; /* Animasjon for å få vannet til å falle */
+}
+
+.shower-water span:nth-child(1){
+    left: 36%; /* Justerer horisontal posisjon */
+    animation-delay: 0s; /* Forsinker animasjonen for å skape variasjon */
+    background: blue;
+}
+
+.shower-water span:nth-child(2){
+    left: 41%;
+    animation-delay: 0.2s;
+    background: lightblue;
+}
+
+.shower-water span:nth-child(3){
+    left: 37%;
+    animation-delay: 0.4s;
+    background: blue;
+}
+
+.shower-water span:nth-child(4){
+    left: 38%;
+    animation-delay: 0.6s;
+    background: blue;
+}
+
+.shower-water span:nth-child(5){
+    left: 39%;
+    animation-delay: 0.8s;
+    background: lightblue;
+}
+
+.shower-water span:nth-child(6){
+    left: 42%;
+    animation-delay: 1s;
+    background: blue;
+}
+.shower-water span:nth-child(7){
+    left: 37%;
+    animation-delay: 1.2s;
+    background: lightblue;
+}
+.shower-water span:nth-child(8){
+    left: 39%;
+    animation-delay: 1.4s;
+    background: blue;
+}
+.shower-water span:nth-child(9){
+    left: 36%;
+    animation-delay: 1.6s;
+    background: lightblue;
+}
+.shower-water span:nth-child(10){
+    left: 35%;
+    animation-delay: 1.8s;
+    background: blue;
+}
+
+@keyframes fall { /* Animasjon for å få vannet til å falle */
+  0%   { transform: translateY(0); } /* Startposisjon */
+  100% { transform: translateY(4500%); } /* Sluttposisjon langt ned */
+}
+
+/* Vann for speilet */
+.mirror-water{ /* Container for vannet som faller fra speilet */
+    position: absolute;
+    top: 0%; 
+    left: 5%;
+    width: 90%;
+    height: 100%;
+    opacity: 0; /* skjult før hover */
+}
+
+.Hotspot-mirror:hover .mirror-water{ 
+    opacity: 1; /* vises ved hover */
+}
+
+.Hotspot-mirror:hover .mirror-water span{
+    animation: mirror-fall 3s linear; /* Animasjon for å få vannet til å falle på speilet */
+    animation-fill-mode: forwards; /* Beholder sluttposisjonen etter animasjonen */
+}
+
+.mirror-water span{ /* Hver vannstråle for speilet */
+    position: absolute; /* Absolutt  posisjonering innenfor mirror-water */
+    top: 10%; /* Startposisjon for vannstrålen */
+    width: 6%; /* Bredde på vannstrålen */
+    height: 5%; /* Størrelse på vannstrålen */
+    background: blue; /* Farge på vannstrålen */
+}
+
+.mirror-water span:nth-child(1){
+    left: 16%;
+}
+
+.mirror-water span:nth-child(2){
+    left: 32%;
+}
+
+.mirror-water span:nth-child(3){
+    left: 48%;
+}
+
+.mirror-water span:nth-child(4){
+    left: 64%;
+}
+
+.mirror-water span:nth-child(5){
+    left: 80%;
+}
+
+.mirror-water span:nth-child(6){
+    left: 96%;
+}
+
+@keyframes mirror-fall { /* Animasjon for å få vannet til å falle på speilet */
+  0%   { transform: translateY(0); } /* Startposisjon */
+  100% { transform: translateY(2000%); } /* Sluttposisjon langt ned */
+}
+
+.mirror-wiper{ /* Viskeren for speilet */
+    position: absolute; 
+    top: 8%; 
+    left: 5%;
+    width: 90%;
+    height: 5%; 
+    background: lightgray;
+    border-radius: 20px; 
+    opacity: 0; /* skjult før hover */
+    z-index: 3; /* Sørger for at viskeren er over vannet */
+}
+
+.Hotspot-mirror:hover .mirror-wiper{
+    animation: wiper-swipe 2s ease 3s 1; /* Animasjon for viskeren 2s animasjonstid 3s ventetid og 1 antall ganger*/
+    animation-fill-mode: forwards; /* Beholder sluttposisjonen etter animasjonen */
+}
+
+/* Fikk hjelp av AI til å finne ut av hvordan viskeren blir usynelig etter at den er ferdig */
+
+@keyframes wiper-swipe{ 
+    0% {
+        opacity: 1; 
+        transform: translateY(0%); } 
+    50% {
+        opacity: 1; 
+        transform: translateY(1800%); }
+    100% { 
+        opacity: 0;
+        transform: translateY(0%); }
+}
+
+.House-link{ /* Stil for hus-ikon lenken */
+    position: absolute;  /* Absolutt posisjonering innenfor Whole-Bathroom */
+    top: 3%; 
+    left: 2%; 
+    z-index: 4; /* Sørger for at ikonet er over alle andre elementer */
+}
+
+.House-icon{ /* Stil for hus-ikon bildet */
+    width: 20%; /* Justerer størrelsen på ikonet */
+    height: auto; /* Bevarer bildeforholdet */
+}
+

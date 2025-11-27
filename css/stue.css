@@ -1,5 +1,169 @@
-body{
-    background: url(/images/stue.png);
-    background-repeat: no-repeat;
+ body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; 
+} 
+
+/* Bakgrunn med bilde av stue */
+#background{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-image: url(/eksamen/bilder/stue.png); /* Bildet er henetet fra Ikea.no */
     background-size: cover;
+    background-repeat: round;   
+} 
+
+/* Google Home diven med et bilde inni seg */
+#google-home-div{
+    position: absolute;
+    width: 8%;
+    height: 16%; 
+    top: 46.5%;
+    left: 32%; 
 }
+
+#google-home-img{
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+}
+
+/* Bildet blir litt større når musen er over bildet */
+#google-home-img:hover{
+    transform: scale(1.2);
+}
+
+/* Støvsuger diven med et bilde inni seg */
+#vacuum-div{
+    position: absolute;
+    width: 15%;
+    height: 20%;
+    top: 80%;
+    left: 25%
+}
+
+#vacuum-img{
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Støvsuger diven med en beskrivelse av animasjoner */
+#vacuum-div{
+   animation-name: vacuum-animation; 
+   animation-duration: 20s;
+   animation-timing-function: linear;
+   animation-delay: 2s;
+   animation-iteration-count: infinite;
+}
+
+/* Animasjon som beveger støvsugeren på gulvet i en firkantet bane */
+@keyframes vacuum-animation{
+    0%   { transform: translateX(0) translateY(0);
+    }       
+    25%  { transform: translateX(300%) translateY(0); 
+    }       
+    50%  { transform: translateX(300%) translateY(-30%); 
+    }   
+     75%  { transform: translateX(0) translateY(-30%); 
+    }      
+     100% { transform: translateX(0) translateY(0); 
+    } 
+}
+
+/* Hund diven med et bilde inni seg */
+#dog-div{
+    position: absolute;
+    width: 12%;
+    height: 18%;
+    top: 57%;
+    right: 7%;
+}
+
+#dog-img{
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Handlingen ved "hover" som aktiverer animasjonen */
+ #dog-img:hover{
+    animation-name: dog-animation;
+    animation-timing-function: linear;
+    animation-delay: 0.5s;
+    animation-duration:2s;
+    transform: scale(1.2);
+}
+
+/* Handlingen ved "hover" som gjør bildet "welcome" synlig */
+#dog-div:hover #welcome-div{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Animasjon som roterer hunden litt opp på venstre side */
+@keyframes dog-animation{
+    0%  { transform: translateY(0) rotate(0deg); 
+    }
+    50% {transform: translateY(0) rotate(15deg);
+    }
+    100% {transform: translateY(0) rotate(0deg);
+    }
+}
+
+/* Velkommen diven med et bilde inni seg */
+#welcome-div{
+    position: absolute;
+    height:100%;
+    width: 100%;
+    top: -50%;
+    right: 60%;
+    visibility: hidden;
+    opacity: 0;
+    transition: 2s;
+}
+
+#welcome-img{
+    height: 100%;
+    width: 100%;
+}
+
+/* Link til hoved siden*/
+#button-exit{
+    position: absolute;
+    height: 15%;
+    width: 10%;
+    margin: 1%;
+   
+}
+
+/* Bilde som knapp */
+#button-exit img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+/* Handlingen ved "hover" som gjør bilde litt større*/
+#button-exit-img:hover{
+transform: scale(1.2);
+}
+
+/* Lydspiller som plasert på "google-home" */
+#audio{
+    position: absolute;
+    background-color: aliceblue; 
+    opacity: 0.5;  
+    cursor: pointer;
+    top: 52%;
+    left: 34.5%;
+    height: 5%;
+    width: 10%;
+    opacity: 0;
+}
+
