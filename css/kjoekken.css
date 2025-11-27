@@ -1,3 +1,9 @@
+/*
+TODO: 
+stove interaction + animation
+*/
+
+/* bakgrunn ligger nederst */
 #background{
     position: fixed;
     top: 0;
@@ -7,20 +13,24 @@
     z-index: -1;
     overflow: hidden;
 }
-
+/* skalerer med vindustørrelse */
 #background-image{
     width: 100vw;
     height: 100vh;
 }
 
+/* alle interaktive hitboxene ligger øverst */
 .hitbox{
     position: absolute;
     z-index: 3;
+    
+    /*debug*/
     /* background-color: #8c00ff;
-    opacity: 0.7; */
-    /* Example positions, adjust as needed */
+    opacity: 0.7;  */
 }
 
+/* hitbox */
+/* forskjøvet boksen for bedre treffsikkerhet */
 #fridge{
     top: 7%;
     left: 7%;
@@ -28,7 +38,24 @@
     width: 14.5%;
     height: 95%;
 }
+/* skjermen starter av */
+#fridge-screen{
+    position: absolute;
+    top: 6.7%;
+    left: 8.1%;
+    width: 13.2%;
+    height: 47.2%;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+}
+/* skjermen skrur seg på */
+#fridge:hover + #fridge-screen{
+    transition: opacity 0.2s linear;
+    opacity: 1;
+}
 
+/* hitbox */
+/* forskjøvet boksen for bedre treffsikkerhet */
 #microwave{
     top: 49%;
     left: 26%;
@@ -36,32 +63,52 @@
     width: 7%;
     height: 7%;
 }
+/* mikrobølgen starter av */
+#microwave-heat {
+    position: absolute;
+    top: 50.3%;
+    left: 29%;
+    width: 2.5%;
+    height: 4%;
+    transform: skewY(2deg);
+    background-color: rgb(255, 145, 0);
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.1s ease-in 0s;
+}
+/* skrur seg på på hover */
+#microwave:hover + #microwave-heat {
+    transition: opacity 0.1s ease-in 0s;
+    opacity: 0.6;
+}
 
+/* hitbox */
 #tap{
-    top: 50%;
+    top: 48%;
     left: 48%;
     width: 3%;
     height: 8%;
 }
+/* vannet skrur seg av fra bunnen (kinda) */
 #water-flow{
     background-color: aqua;
     position:absolute;
     width: 0.5%;
     height: 0;
-    /* height: 5.7%; */
     top: 55%;
     left: 48.8%;
     z-index: 0;
     opacity: 1;
     transition: height 0.4s linear, top 0.4s linear;
 }
+/* vannet skrur seg på */
 #tap:hover + #water-flow{
     transition: height 0.5s linear, top 0s linear;
     height: 5.7%;
     top: 49.5%;
 }
 
-
+/* hitbox */
 #knife{
     top: 48%;
     left: 51%;
@@ -80,19 +127,21 @@
 }
 @keyframes knife-cutting-animation {
     0% {transform: translateY(0);}
-    /* 50% {transform: translateY(-100%);} */
     100% {transform: translateY(-100%);}
 }
 
+/* hitbox */
 #stove{
     top:  48%;
     left: 59%;
     width: 10%;
     height: 10%;
 }
+
+/* hitbox */
 #blender{
     top: 42%;
-    left:70%;
+    left:71%;
     width: 6%;
     height: 14%;
 }
@@ -103,6 +152,7 @@
     top: 44%;
     left: 72%;
 }
+/* blenderen rister */
 #blender:hover + #blender-image{
     animation: blender-animation 0.1s linear 0s infinite;
 }
@@ -113,6 +163,9 @@
     75%{transform: rotate(-15deg);}
     100%{transform: rotate(0);}
 }
+
+/* forskjøvet boksen for bedre treffsikkerhet */
+/* hitbox */
 #oven{
     top: 31%;
     left: 81%;
@@ -132,42 +185,28 @@
     z-index: 0;
     opacity: 0;
     transition: opacity 1s ease-in 0s;
-    /* animation: oven-heat-anim 1s infinite; */
 }
 #oven:hover + #oven-heat{
-    /* animation: oven-heat-anim 3s linear forwards; */
     transition: opacity 2s ease-in 0s;
     opacity: 0.6;
 }
 
-#microwave-heat{
-    position: absolute;
-    top: 50.3%;
-    left: 29%;
-    width: 2.5%;
-    height: 4%;
-    transform: skewY(2deg);
-    background-color: rgb(255, 145, 0);
-    z-index: 0;
-    opacity: 0;
-    transition: opacity 0.1s ease-in 0s;
-}
-
-#microwave:hover + #microwave-heat {
-    transition: opacity 0.1s ease-in 0s;
-    opacity: 0.6;
-}
-
-
+/* hjemknappen starter gjennomsiktig */
 #home-button{
-    position: absolute;
+position: absolute;
     width: 100px;
     height: 100px;
     top: 0%;
     left: 0;
     z-index: 1;
-    background-color: blueviolet;
 }
 #home-image{
     max-width: 100%;
+    opacity: 0.2;
+    transition: opacity 0.2s linear;
+}
+/* hjemknappen blir solid når brukeren hover over knappen */
+#home-image:hover{
+    transition: opacity 0.2s linear;
+    opacity: 1;
 }
